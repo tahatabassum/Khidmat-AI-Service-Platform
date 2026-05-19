@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#2a6b2c",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface-variant": "#41493e",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#78dc77",
+                    "secondary": "#006e1c",
+                    "surface": "#f8f9fa",
+                    "tertiary": "#533400",
+                    "on-background": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#0c5216",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#00731e",
+                    "tertiary-container": "#724900",
+                    "inverse-surface": "#2e3132",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed": "#002204",
+                    "on-primary-fixed": "#002203",
+                    "secondary-container": "#91f78e",
+                    "primary-fixed-dim": "#91d78a",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c0c9bb",
+                    "primary-container": "#1b5e20",
+                    "error": "#ba1a1a",
+                    "outline": "#717a6d",
+                    "on-surface": "#191c1d",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#2a1800",
+                    "surface-container-highest": "#e1e3e4",
+                    "secondary-fixed": "#94f990",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb957",
+                    "tertiary-fixed": "#ffddb5",
+                    "surface-container-low": "#f3f4f5",
+                    "primary": "#00450d",
+                    "on-tertiary-fixed-variant": "#643f00",
+                    "surface-container": "#edeeef",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#91d78a",
+                    "on-primary-container": "#90d689",
+                    "surface-container-high": "#e7e8e9",
+                    "primary-fixed": "#acf4a4",
+                    "on-secondary-fixed-variant": "#005313",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary-container": "#ffb751"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "card-gap": "12px",
+                    "container-margin": "16px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["10px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ai-pulse {
+            position: relative;
+        }
+        .ai-pulse::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(144, 214, 137, 0.4);
+            animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.33); opacity: 1; }
+            80%, 100% { transform: scale(1.5); opacity: 0; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center h-14 px-container-margin w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim cursor-pointer">menu</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Khidmat خدمت</span>
+</div>
+<div class="flex items-center">
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant" data-alt="A professional close-up portrait of a user in a clean, modern style with soft studio lighting. The image maintains a high-end corporate aesthetic with a minimalist neutral background, aligning with the Pakistan Green branding through subtle emerald accents in the attire. The lighting is bright and welcoming, reflecting a trustworthy digital service platform user profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjohRv9ocmg_gpehdrRZVgZhUC5_60CPSee9xHUL6ZwwzxzMn8Ehza5R-ssovFRRDTBiqS5RvVZIpPTpBrxuuV9kiuA-3ZOJFJfLYZWVjOEowOMupi3f4QKPfhkX6NM9ucbmADnqzlAV7anOCiU10A5U7f2_pQVBb4PMZaqIM3kN9IjXoGq3ICkJMKJVXLCA-wg_DF4dKG6enrEac_kz0EiNJ2M2Mh8d8c-92os9NmSXSd2o7YPH_LVEFDvCuH1UftuZ3bF4ULV3g"/>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="mt-20 px-container-margin max-w-2xl mx-auto space-y-card-gap">
+<!-- Intent Card (AI Summary) -->
+<div class="bg-primary-container text-on-primary-container p-md rounded-xl shadow-sm border border-primary/20">
+<div class="flex items-start gap-3">
+<div class="bg-surface rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="flex-1">
+<h2 class="font-title-lg text-title-lg mb-1">Search Intent</h2>
+<div class="grid grid-cols-3 gap-2 mt-3">
+<div class="bg-surface/10 rounded-lg p-2 border border-surface/20">
+<p class="font-label-lg text-label-lg opacity-80 mb-0.5">Service</p>
+<p class="font-body-md text-body-md font-bold">AC Repair</p>
+</div>
+<div class="bg-surface/10 rounded-lg p-2 border border-surface/20">
+<p class="font-label-lg text-label-lg opacity-80 mb-0.5">Location</p>
+<p class="font-body-md text-body-md font-bold">G-13</p>
+</div>
+<div class="bg-surface/10 rounded-lg p-2 border border-surface/20">
+<p class="font-label-lg text-label-lg opacity-80 mb-0.5">Urgency</p>
+<p class="font-body-md text-body-md font-bold">High</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 px-1">Top Matches</h3>
+</div>
+<!-- Provider Card 1 (Ranked #1) -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-md">
+<div class="flex gap-4">
+<div class="relative">
+<img alt="Ahmad Khan" class="w-20 h-20 rounded-lg object-cover" data-alt="A professional Pakistani HVAC technician wearing a clean forest green uniform, smiling confidently. He is standing in front of a modern residential background in Islamabad. The photo is high-resolution with bright, natural daylight, conveying expertise, reliability, and institutional trust in a high-tech service economy context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3YWOg7_xB03GLBFjDMzJp7AZo1_SnRkz1GkPrWClNWcymWeOf_ciXgfwm__A4LS_WRw9PapJuEpQfkR8Qb8EdFY65NJXEAkYdSahjOq1NspzDk0XpMIoli87R5pXVmvkequ24aoFgVQx1mYOJggerYfnIDyEDaPolnPseeqIEYa4YWPnndUmjF-RNnQtU0zfqsI53d0ka9XMqL_0js6qfIXMDCzshvvYc0bHphKyxnlFzSBBG3J0REDwR690u-6bYnThJTkhhDjE"/>
+<div class="absolute -top-2 -left-2 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded-full font-label-lg text-label-lg shadow-sm border border-tertiary/20">
+                            #1 Rank
+                        </div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-title-lg text-title-lg text-on-surface">Ahmad Khan</h4>
+<div class="flex items-center bg-secondary-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-secondary-container">4.9 (124)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> 1.2 km away
+                        </p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="bg-surface-variant text-on-surface-variant font-label-lg text-label-lg px-2 py-1 rounded">Split AC</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-lg text-label-lg px-2 py-1 rounded">Inverter Pro</span>
+</div>
+</div>
+</div>
+<!-- AI Reasoning Box -->
+<div class="mt-4 bg-[#E8F5E9] rounded-lg p-3 border border-primary/10 flex gap-3">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary font-bold mb-0.5 uppercase tracking-wider">Khidmat AI Match</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-tight">
+                            Chose Ahmad over others due to specialized AC expertise and high reliability in G-13. Available in 20 mins.
+                        </p>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="mt-4 pt-4 border-t border-outline-variant">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<p class="font-label-lg text-label-lg text-on-surface-variant">Estimated Total</p>
+<p class="font-headline-md text-headline-md text-secondary font-bold">Rs. 2,450</p>
+</div>
+<button class="bg-primary text-on-primary font-title-lg text-title-lg px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors">
+                            Book Now
+                        </button>
+</div>
+<!-- Stacked Bar Price Breakdown -->
+<div class="mt-3 flex h-2 w-full rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 70%;" title="Labor: Rs 1715"></div>
+<div class="h-full bg-tertiary-fixed-dim" style="width: 20%;" title="Materials: Rs 490"></div>
+<div class="h-full bg-primary-fixed" style="width: 10%;" title="Platform Fee: Rs 245"></div>
+</div>
+<div class="mt-2 flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Labor (70%)</span>
+<span>Materials (20%)</span>
+<span>Fee (10%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 2 (Ranked #2) -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm opacity-90">
+<div class="p-md">
+<div class="flex gap-4">
+<div class="relative">
+<img alt="Zahid Mehmood" class="w-20 h-20 rounded-lg object-cover grayscale-[0.2]" data-alt="A portrait of an experienced technician in Pakistan wearing work attire, holding a toolkit. The image is captured in a professional, service-oriented manner with soft focus on the background. Minimalist lighting and natural colors emphasize reliability and trust, consistent with the corporate design language of the Khidmat platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDM1BSdS97SXJijZu7MulyWI3IsLqcHazPc_jX4MGtxPBD-Zur0G9WmVCD2H07nHOz8OhujLpsVBzbZfX9PU-9WgtuTAXtLZ0FKhQDBAl1a2s1RNtFsYx-pU7OZPr5q0DABFTotZ19ZkRM2P4VTod3JWV7dr0y-A0IdZ94AIGLWVRJOq8vnik2xJM4QgxVSNPrCnC2lEvucHCiLbgnJkaAGMYTuOK-oLgXM3h8u4Aui44zUps02P-Tx2-hYNxhRSYdS1tiLgjiyBM"/>
+<div class="absolute -top-2 -left-2 bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded-full font-label-lg text-label-lg shadow-sm border border-outline">
+                            #2 Rank
+                        </div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-title-lg text-title-lg text-on-surface">Zahid Mehmood</h4>
+<div class="flex items-center bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">4.7 (89)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> 2.5 km away
+                        </p>
+</div>
+</div>
+<div class="mt-4 bg-[#E8F5E9]/50 rounded-lg p-3 border border-primary/5 flex gap-3">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-primary/60" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-tight">
+                        Solid choice for general maintenance. Lower proximity but high score in previous G-13 service tasks.
+                    </p>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<div class="space-y-1">
+<p class="font-label-lg text-label-lg text-on-surface-variant">Estimated Total</p>
+<p class="font-title-lg text-title-lg text-secondary font-bold">Rs. 1,900</p>
+</div>
+<button class="border border-primary text-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-primary/5 transition-colors">
+                        View Details
+                    </button>
+</div>
+</div>
+</div>
+<!-- Agent Trace (Process) -->
+<div class="py-4">
+<h4 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-[0.1em] mb-4 text-center">AI Selection Process</h4>
+<div class="relative pl-8 space-y-6 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[1px] before:border-l before:border-dashed before:border-primary/40">
+<div class="relative">
+<div class="absolute -left-8 mt-1.5 w-6 h-6 bg-secondary-container rounded-full flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Scanning G-13 sector providers</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">14 technicians found online</p>
+</div>
+<div class="relative">
+<div class="absolute -left-8 mt-1.5 w-6 h-6 bg-secondary-container rounded-full flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Filtering specialized AC skills</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Refining list to top 5 experts</p>
+</div>
+<div class="relative">
+<div class="absolute -left-8 mt-1.5 w-6 h-6 bg-white border-2 border-secondary rounded-full flex items-center justify-center ai-pulse">
+<div class="w-2 h-2 bg-secondary rounded-full"></div>
+</div>
+<p class="font-body-md text-body-md font-semibold text-primary">Finalizing optimal pricing</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Calculating labor vs. market standard</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline shadow-lg flex justify-around items-center h-16 w-full pb-safe">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm-mobile md:text-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-xl px-4 py-1 scale-95 transition-transform duration-150 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="font-label-sm text-label-sm-mobile md:text-label-sm">My Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm-mobile md:text-label-sm">Profile</span>
+</div>
+</nav>
+</body></html>

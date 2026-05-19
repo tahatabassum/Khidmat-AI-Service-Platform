@@ -1,0 +1,31 @@
+# Python environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Databases
+*.db
+*.sqlite3
+
+# Logs and traces
+traces/
+followup_logs/
+*.log
+
+# Environment secrets
+.env
+
+# Expo / React Native
+.expo/
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db

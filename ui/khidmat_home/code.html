@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Khidmat - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#2a6b2c",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#41493e",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#78dc77",
+                        "secondary": "#006e1c",
+                        "surface": "#f8f9fa",
+                        "tertiary": "#533400",
+                        "on-background": "#191c1d",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#00731e",
+                        "tertiary-container": "#724900",
+                        "inverse-surface": "#2e3132",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary-fixed": "#002203",
+                        "secondary-container": "#91f78e",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c0c9bb",
+                        "primary-container": "#1b5e20",
+                        "error": "#ba1a1a",
+                        "outline": "#717a6d",
+                        "on-surface": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#2a1800",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary-fixed": "#94f990",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed-dim": "#ffb957",
+                        "tertiary-fixed": "#ffddb5",
+                        "surface-container-low": "#f3f4f5",
+                        "primary": "#00450d",
+                        "on-tertiary-fixed-variant": "#643f00",
+                        "surface-container": "#edeeef",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#91d78a",
+                        "on-primary-container": "#90d689",
+                        "surface-container-high": "#e7e8e9",
+                        "primary-fixed": "#acf4a4",
+                        "on-secondary-fixed-variant": "#005313",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#ffb751"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "card-gap": "12px",
+                        "container-margin": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["10px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm border-b border-outline-variant flex justify-between items-center h-14 px-container-margin transition-colors duration-200">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-surface-container-high rounded-full p-2">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Khidmat خدمت</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional studio headshot of a smiling Pakistani service coordinator in a clean white shirt, against a soft blurred background of a modern office. The lighting is warm and natural, creating a high-trust, corporate yet accessible atmosphere. The visual style is crisp and high-definition, emphasizing institutional credibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfDOomQh0ylIewR8cOyCYs6mHGqtOSION0rSLsk8-plJrLNkC-gfUROprDcCJKQrefujCgEC8ukH67UxfMbxMNFrXH7MFXpv7Bq0UWL0QaPMe-CrV6X4YO9x278QM99vsZTHZXQMHA9EH3E_CW2RR91lXvXNLVoNOVkzY5QgAp73Qy0hSOZkckQvj-eDGcvlmcifj-w3_kUlEobDGQTCikgzu1-925KKBwujpsZ4tPNOhfebPtH1DhXvQvJxITQWaJYcIn-ZX9Ekg"/>
+</div>
+</div>
+</header>
+<main class="pt-20 px-container-margin space-y-lg">
+<!-- Stats Bar -->
+<section class="bg-primary-container/10 border border-outline-variant rounded-xl p-md flex justify-around items-center shadow-sm">
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-primary font-bold">40+</p>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Providers</p>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant"></div>
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-primary font-bold">4</p>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Cities</p>
+</div>
+</section>
+<!-- Service Quick-Select Scroll -->
+<section>
+<div class="flex items-center justify-between mb-sm">
+<h2 class="font-title-lg text-title-lg text-on-surface">Categories</h2>
+<span class="text-primary font-label-lg text-label-lg cursor-pointer">See All</span>
+</div>
+<div class="flex gap-sm overflow-x-auto hide-scrollbar pb-xs -mx-container-margin px-container-margin">
+<div class="flex-shrink-0 flex flex-col items-center gap-xs cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">ac_unit</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface-variant group-hover:text-primary">AC Tech</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">plumbing</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface-variant group-hover:text-primary">Plumber</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface-variant group-hover:text-primary">Electrician</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface-variant group-hover:text-primary">Tutor</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">cleaning_services</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface-variant group-hover:text-primary">Cleaner</span>
+</div>
+</div>
+</section>
+<!-- AI Orchestration Input Canvas -->
+<section class="space-y-sm">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-lg overflow-hidden relative">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="flex items-center gap-2 mb-md">
+<div class="p-1.5 bg-primary-container rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h2 class="font-title-lg text-title-lg text-primary">Khidmat AI Agent</h2>
+</div>
+<div class="bg-surface-container-low rounded-lg p-md border border-outline-variant/30 mb-md">
+<textarea class="w-full bg-transparent border-none focus:ring-0 font-body-lg text-body-lg text-on-surface placeholder-on-surface-variant min-h-[120px] resize-none" placeholder="Apni zaroorat batayein... (Urdu, Roman Urdu, or English)"></textarea>
+</div>
+<div class="flex flex-wrap gap-xs mb-md">
+<div class="bg-surface border border-primary px-3 py-1.5 rounded-full flex items-center gap-1 cursor-pointer hover:bg-primary/5 transition-colors">
+<span class="font-label-lg text-label-lg text-primary">AC repair G-13</span>
+<span class="material-symbols-outlined text-xs text-primary">north_east</span>
+</div>
+<div class="bg-surface border border-primary px-3 py-1.5 rounded-full flex items-center gap-1 cursor-pointer hover:bg-primary/5 transition-colors">
+<span class="font-label-lg text-label-lg text-primary">Plumber for leakage</span>
+<span class="material-symbols-outlined text-xs text-primary">north_east</span>
+</div>
+<div class="bg-surface border border-primary px-3 py-1.5 rounded-full flex items-center gap-1 cursor-pointer hover:bg-primary/5 transition-colors">
+<span class="font-label-lg text-label-lg text-primary">Math tutor class 10</span>
+<span class="material-symbols-outlined text-xs text-primary">north_east</span>
+</div>
+</div>
+<button class="w-full h-14 bg-primary text-on-primary rounded-xl font-title-lg flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform">
+<span>Search with AI</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</section>
+<!-- Promotional Bento Card -->
+<section class="grid grid-cols-2 gap-sm">
+<div class="col-span-2 h-40 rounded-xl overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A wide, professional architectural shot of Islamabad city landscape during sunset, highlighting the modern skyline and clean streets. The lighting is golden and warm, casting a serene glow over the urban environment. The image style is premium and high-contrast, reflecting the Khidmat brand's commitment to quality and institutional trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7U65FMplIj0_SC72B2L-bnvNAUzzNC6QFeGF-CcG8tPb367jshjeFl_adKTjb5HymmANrxuJe_mkaKI5yLEyxQtlYTFXCJpZx5NhLjUwRAtvDv9D3U8ZnUB1szWE7Z6V7luUua15geEXl5aqpmMAOdAfSzyf2zcUs1NJlpRcEVKgTMRmYZ9T4dzvwFsnoZ7I0-jBXhlsk4QiRRfZv5Tadyj4yTTGBZLT7wSLnfgWLXrX4CVKi0sdVLgn8lgIkDFCVQ82Avan2yR8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-md">
+<p class="font-headline-md text-headline-md text-white">Trust In Every Fix</p>
+<p class="font-body-md text-body-md text-white/90">Verified professionals across Islamabad</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container border-t border-outline-variant shadow-lg flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 scale-95 transition-transform duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant scale-95 transition-transform duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-sm text-label-sm">My Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant scale-95 transition-transform duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) - Contextual for Booking -->
+<div class="fixed bottom-20 right-md z-40">
+<button class="w-14 h-14 bg-secondary text-on-secondary rounded-2xl shadow-xl flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl">chat_bubble</span>
+</button>
+</div>
+</body></html>

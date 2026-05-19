@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#2a6b2c",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface-variant": "#41493e",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#78dc77",
+                    "secondary": "#006e1c",
+                    "surface": "#f8f9fa",
+                    "tertiary": "#533400",
+                    "on-background": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#0c5216",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#00731e",
+                    "tertiary-container": "#724900",
+                    "inverse-surface": "#2e3132",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed": "#002204",
+                    "on-primary-fixed": "#002203",
+                    "secondary-container": "#91f78e",
+                    "primary-fixed-dim": "#91d78a",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c0c9bb",
+                    "primary-container": "#1b5e20",
+                    "error": "#ba1a1a",
+                    "outline": "#717a6d",
+                    "on-surface": "#191c1d",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#2a1800",
+                    "surface-container-highest": "#e1e3e4",
+                    "secondary-fixed": "#94f990",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb957",
+                    "tertiary-fixed": "#ffddb5",
+                    "surface-container-low": "#f3f4f5",
+                    "primary": "#00450d",
+                    "on-tertiary-fixed-variant": "#643f00",
+                    "surface-container": "#edeeef",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#91d78a",
+                    "on-primary-container": "#90d689",
+                    "surface-container-high": "#e7e8e9",
+                    "primary-fixed": "#acf4a4",
+                    "on-secondary-fixed-variant": "#005313",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary-container": "#ffb751"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "card-gap": "12px",
+                    "container-margin": "16px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["10px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .trace-line {
+            background-image: linear-gradient(to bottom, #006e1c 50%, transparent 50%);
+            background-size: 2px 8px;
+            background-repeat: repeat-y;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased mb-20">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center h-14 px-container-margin w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim cursor-pointer transition-colors duration-200" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Khidmat خدمت</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl9Cn6--_FxqIhSukX-MKWSiTWp9mQBJj1PmLj9g0C9pAAOASMT7AKRRVSsG0Lz1_vKvADY1Pn3Git0-0UepfPyZLWRnFL03Tx-AdGOXjey3ST2zbxilqp5mX2KKSNn-bwvEOSBj3V1QAQPLPYlJobmjgcuonVunyqcIn5SpmvcNEGs4_45OORPJdz41NZTjgzgHI3BphL0j1FsA5Z2gIBIB9LHXLHfj65ZczHYFYDZs9WJw7YmLgdQ8oo-vN9pcx6SZ8mJW1AHSg"/>
+</div>
+</header>
+<main class="mt-20 px-container-margin max-w-2xl mx-auto">
+<!-- AI Intelligence Header -->
+<section class="mb-8 p-lg rounded-xl bg-[#E8F5E9] border border-secondary-container">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary" data-icon="neurology">neurology</span>
+<h2 class="font-title-lg text-title-lg text-primary">Khidmat AI Orchestration</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Our multi-agent system is processing your request in real-time to find the most reliable service provider in your area.</p>
+</section>
+<!-- Vertical Agent Trace Timeline -->
+<div class="relative pl-8">
+<!-- Continuous Trace Line -->
+<div class="absolute left-[15px] top-0 bottom-0 w-[2px] trace-line opacity-30"></div>
+<!-- Trace Item 1 -->
+<div class="relative mb-xl">
+<div class="absolute -left-8 top-1 flex items-center justify-center w-8 h-8 bg-surface-container rounded-full z-10">
+<span class="material-symbols-outlined text-secondary" data-icon="psychology" data-weight="fill">psychology</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-label-lg text-label-lg text-primary">1. Intent Parser (NLU)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • 450ms</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-sm border border-outline-variant/30">
+<p class="font-body-md text-body-md italic text-on-surface-variant">"User needs emergency leak repair for a kitchen sink in Johar Town, Lahore."</p>
+</div>
+</div>
+</div>
+<!-- Trace Item 2 -->
+<div class="relative mb-xl">
+<div class="absolute -left-8 top-1 flex items-center justify-center w-8 h-8 bg-surface-container rounded-full z-10">
+<span class="material-symbols-outlined text-secondary" data-icon="travel_explore" data-weight="fill">travel_explore</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-label-lg text-label-lg text-primary">2. Provider Discovery</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • 820ms</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                        Found 14 certified plumbers within a 5km radius of your location.
+                    </div>
+</div>
+</div>
+<!-- Trace Item 3 -->
+<div class="relative mb-xl">
+<div class="absolute -left-8 top-1 flex items-center justify-center w-8 h-8 bg-surface-container rounded-full z-10">
+<span class="material-symbols-outlined text-secondary" data-icon="military_tech" data-weight="fill">military_tech</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-label-lg text-label-lg text-primary">3. Provider Matcher (Ranking)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • 1.2s</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                        Ranked top 3 providers based on "Emergency Plumbing" specialization and 4.8+ star ratings.
+                    </div>
+</div>
+</div>
+<!-- Trace Item 4 -->
+<div class="relative mb-xl">
+<div class="absolute -left-8 top-1 flex items-center justify-center w-8 h-8 bg-surface-container rounded-full z-10">
+<span class="material-symbols-outlined text-secondary" data-icon="payments" data-weight="fill">payments</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-label-lg text-label-lg text-primary">4. Pricing Engine (Dynamic Quote)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • 310ms</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-sm border border-outline-variant/30 flex items-center justify-between">
+<p class="font-body-md text-body-md font-bold text-secondary">Est. PKR 1,200 - 1,800</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Market standard rate</p>
+</div>
+</div>
+</div>
+<!-- Trace Item 5 -->
+<div class="relative mb-xl">
+<div class="absolute -left-8 top-1 flex items-center justify-center w-8 h-8 bg-surface-container rounded-full z-10">
+<span class="material-symbols-outlined text-secondary" data-icon="event_available" data-weight="fill">event_available</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-label-lg text-label-lg text-primary">5. Booking Engine (Slot Check)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • 540ms</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                        Verified availability for immediate dispatch with "Ali Plumbing Services".
+                    </div>
+</div>
+</div>
+<!-- Trace Item 6 -->
+<div class="relative mb-8">
+<div class="absolute -left-8 top-1 flex items-center justify-center w-8 h-8 bg-primary-container rounded-full z-10 animate-pulse">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="schedule_send" data-weight="fill">schedule_send</span>
+</div>
+<div class="bg-surface-container-lowest border-2 border-secondary rounded-xl p-md shadow-lg">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-label-lg text-label-lg text-primary">6. Follow-up Scheduler</h3>
+<p class="font-label-sm text-label-sm text-secondary font-bold">Active Processing...</p>
+</div>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                        Preparing post-service quality check and insurance coverage confirmation.
+                    </div>
+</div>
+</div>
+</div>
+<!-- Summary Action Card -->
+<div class="mt-lg p-lg bg-surface-container rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="done_all">done_all</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs">Match Ready</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">AI Orchestration is 95% complete. We have found your best match.</p>
+<button class="w-full h-14 bg-secondary text-on-secondary rounded-xl font-bold transition-all hover:brightness-110 active:scale-95">
+                View Matched Provider
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline shadow-lg flex justify-around items-center h-16 w-full pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface transition-transform duration-150 ease-in-out scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm-mobile md:text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-xl px-4 py-1 transition-transform duration-150 ease-in-out scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-label-sm text-label-sm-mobile md:text-label-sm">My Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface transition-transform duration-150 ease-in-out scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm-mobile md:text-label-sm">Profile</span>
+</a>
+</nav>
+</body></html>
